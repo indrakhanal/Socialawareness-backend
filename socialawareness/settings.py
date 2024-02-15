@@ -13,13 +13,14 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 from pathlib import Path
 from decouple import config
 import os
-import django_heroku
+# import django_heroku
 import dj_database_url
 
 
-DATABASE_NAME = config('DATABASE_NAME')
-DATABASE_PASSWORD = config('DATABASE_PASSWORD')
-DEBUG = config('DEBUG')
+# DATABASE_NAME = config('DATABASE_NAME')
+# DATABASE_PASSWORD = config('DATABASE_PASSWORD')
+DEBUG = True
+# config('DEBUG')
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -163,8 +164,8 @@ DATABASES = {
 # }
 
 
-db_from_env = dj_database_url.config()
-DATABASES['default'].update(db_from_env)
+# db_from_env = dj_database_url.config()
+# DATABASES['default'].update(db_from_env)
 
 
 AUTH_USER_MODEL = 'accounts.CustomUser'
@@ -267,7 +268,7 @@ STATIC_URL = 'static/'
 # )
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-django_heroku.settings(locals())
+# django_heroku.settings(locals())
 
 
-CORS_ORIGIN_WHITELIST = ['http://localhost:3000']
+CORS_ORIGIN_WHITELIST = ['http://localhost:3000', 'https://socialawareness.netlify.app']
