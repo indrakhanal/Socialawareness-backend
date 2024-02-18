@@ -271,4 +271,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # django_heroku.settings(locals())
 
 
-CORS_ORIGIN_WHITELIST = ['http://localhost:3000', 'https://socialawareness.netlify.app']
+CORS_ORIGIN_WHITELIST = ['http://localhost:3000', 'https://socialawareness.netlify.app', 'https://awarenessocial.netlify.app']
